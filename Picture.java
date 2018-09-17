@@ -1,10 +1,13 @@
 /**
  * This is a picture of the classic James Bond Gun Barrel Opening
  * If you running the setBlood() method it will even produce the blood
- * seen at the end of the openings
+ * seen at the end of the openings.
+ * 
+ * I also added a color to the setForegroundColor() method. It is used here
+ * it was leftover from an earlier idea. However, I decided to leave it in.
  * 
  * @author  Michael (Mike) Moretti
- * @version current
+ * @version 09.16.2018
  */
 public class Picture
 {
@@ -122,18 +125,22 @@ public class Picture
      * Change this picture to black/white display
      */
     public void setBlackAndWhite()
-    {       
-        background.changeColor("black");
-        line1.changeColor("white");
-        cover1.changeColor("black");
-        line2.changeColor("white");
-        missing.changeColor("black");
-        cover2.changeColor("black");
-        line3.changeColor("white");
-        cover3.changeColor("black");
-        opening.changeColor("white");
-        bond.changeColor("black");
-        blood1.changeColor("gray");
+    { 
+        // only if it's painted already
+        if (background != null)
+        {
+            background.changeColor("black");
+            line1.changeColor("white");
+            cover1.changeColor("black");
+            line2.changeColor("white");
+            missing.changeColor("black");
+            cover2.changeColor("black");
+            line3.changeColor("white");
+            cover3.changeColor("black");
+            opening.changeColor("white");
+            bond.changeColor("black");
+            blood1.changeColor("gray");
+        }
     }
 
     /**
@@ -141,17 +148,20 @@ public class Picture
      */
     public void setColor()
     {
-       background.changeColor("black");
-        line1.changeColor("white");
-        cover1.changeColor("black");
-        line2.changeColor("white");
-        missing.changeColor("black");
-        cover2.changeColor("black");
-        line3.changeColor("white");
-        cover3.changeColor("black");
-        opening.changeColor("white");
-        bond.changeColor("black");
-        blood1.changeColor("red");
+        if (background != null)
+        {
+            background.changeColor("black");
+            line1.changeColor("white");
+            cover1.changeColor("black");
+            line2.changeColor("white");
+            missing.changeColor("black");
+            cover2.changeColor("black");
+            line3.changeColor("white");
+            cover3.changeColor("black");
+            opening.changeColor("white");
+            bond.changeColor("black");
+            blood1.changeColor("red");
+        }
     }
     
     /**
